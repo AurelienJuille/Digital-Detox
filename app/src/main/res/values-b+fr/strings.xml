@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Digital Detox App</string>
+    <string name="accessibility_service_label">Digital Detox App</string>
+    <string name="accessibility_service_description">accessibility_service_description</string>
+    <string name="block">Blocage</string>
+    <string name="more">Plus</string>
+    <string name="progress">Progrès</string>
+    <string name="add">Ajouter</string>
+    <string name="settings">Paramètres</string>
+</resources>
