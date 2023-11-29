@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DigitalDetoxV3"
 include(":app")
- 
+
