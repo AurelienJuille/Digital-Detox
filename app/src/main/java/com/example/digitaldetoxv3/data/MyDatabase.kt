@@ -6,7 +6,10 @@ import androidx.room.Room
 import androidx.room.Room.databaseBuilder
 import androidx.room.RoomDatabase
 
-@Database(entities = [BlockProgram::class], version = 1, exportSchema = false)
+@Database(
+    entities = [BlockProgram::class],
+    version = 1,
+    exportSchema = false)
 abstract class MyDatabase : RoomDatabase() {
     abstract fun blockProgramDao(): BlockProgramDao
     companion object {

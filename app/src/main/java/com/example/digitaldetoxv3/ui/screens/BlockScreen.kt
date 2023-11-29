@@ -37,7 +37,9 @@ fun Block(bottomBarNavController: NavController, rootNavController: NavControlle
         Button(
             modifier = Modifier
                 .align(Alignment.BottomCenter),
-            onClick = { rootNavController.navigate("configureBlockScreen") },
+            onClick = {
+                rootNavController.navigate("configureBlockScreen")
+                      },
             colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary)
         ) {
             TText(text = R.string.add)
