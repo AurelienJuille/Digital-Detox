@@ -73,34 +73,18 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+    implementation("androidx.activity:activity-ktx:1.8.1")
+    implementation("androidx.fragment:fragment-ktx:1.6.0")
+
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.7.5")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
     implementation("androidx.compose.material:material:1.3.1")
 
-    // Room
-    val roomVersion = "2.5.0"
+    // DataStore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
 
-    implementation("androidx.room:room-runtime:$roomVersion")
-    annotationProcessor("androidx.room:room-compiler:$roomVersion")
-    ksp("androidx.room:room-compiler:$roomVersion")
-
-    // optional - Kotlin Extensions and Coroutines support for Room
-    implementation("androidx.room:room-ktx:$roomVersion")
-
-    // optional - RxJava2 support for Room
-    implementation("androidx.room:room-rxjava2:$roomVersion")
-
-    // optional - RxJava3 support for Room
-    implementation("androidx.room:room-rxjava3:$roomVersion")
-
-    // optional - Guava support for Room, including Optional and ListenableFuture
-    implementation("androidx.room:room-guava:$roomVersion")
-
-    // optional - Test helpers
-    testImplementation("androidx.room:room-testing:$roomVersion")
-
-    // optional - Paging 3 Integration
-    implementation("androidx.room:room-paging:$roomVersion")
+    // Gson
+    implementation("com.google.code.gson:gson:2.8.8")
 
 }

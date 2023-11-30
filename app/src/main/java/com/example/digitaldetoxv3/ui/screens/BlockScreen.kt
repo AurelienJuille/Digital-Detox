@@ -7,21 +7,21 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.digitaldetoxv3.R
-import com.example.digitaldetoxv3.ui.components.TText
 
 @Composable
-fun Block(bottomBarNavController: NavController, rootNavController: NavController) {
+fun Block(bottomBarNavController: NavController,
+          rootNavController: NavController) {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(color = Color.White)) {
@@ -34,15 +34,13 @@ fun Block(bottomBarNavController: NavController, rootNavController: NavControlle
                 Text(text = "test")
             }
         }
-        Button(
+        FloatingActionButton(
             modifier = Modifier
                 .align(Alignment.BottomCenter),
             onClick = {
-                rootNavController.navigate("configureBlockScreen")
-                      },
-            colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.primary)
+                rootNavController.navigate("configureBlockScreen")},
         ) {
-            TText(text = R.string.add)
+            Icon(imageVector = Icons.Default.AddCircle, "Add Program")
         }
     }
 }
