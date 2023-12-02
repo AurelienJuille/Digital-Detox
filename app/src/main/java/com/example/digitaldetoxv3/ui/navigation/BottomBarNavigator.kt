@@ -23,11 +23,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.digitaldetoxv3.ui.screens.Block
-import com.example.digitaldetoxv3.ui.screens.More
-import com.example.digitaldetoxv3.ui.screens.Progress
+import com.example.digitaldetoxv3.ui.screens.BlockScreen
+import com.example.digitaldetoxv3.ui.screens.MoreScreen
+import com.example.digitaldetoxv3.ui.screens.ProgressScreen
 import com.example.digitaldetoxv3.ui.screens.Screen
-import com.example.digitaldetoxv3.ui.screens.Settings
+import com.example.digitaldetoxv3.ui.screens.SettingsScreen
 
 @Composable
 fun BottomTabNavigator (rootNavController: NavController) {
@@ -73,10 +73,10 @@ fun BottomTabNavigator (rootNavController: NavController) {
             Modifier.padding(innerPadding),
             enterTransition = { EnterTransition.None },
             exitTransition = { ExitTransition.None }) {
-            composable(Screen.Block.route) { Block(navController, rootNavController) }
-            composable(Screen.More.route) { More(navController, rootNavController) }
-            composable(Screen.Progress.route) { Progress(navController, rootNavController) }
-            composable(Screen.Settings.route) { Settings(navController, rootNavController) }
+            composable(Screen.Block.route) { BlockScreen(navController, rootNavController) }
+            composable(Screen.More.route) { MoreScreen(navController, rootNavController) }
+            composable(Screen.Progress.route) { ProgressScreen(navController, rootNavController) }
+            composable(Screen.Settings.route) { SettingsScreen(navController, rootNavController) }
         }
     }
 }

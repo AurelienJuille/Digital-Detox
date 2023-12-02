@@ -1,10 +1,12 @@
 package com.example.digitaldetoxv3.data
 
+import androidx.compose.runtime.snapshots.SnapshotStateList
+import com.google.gson.annotations.SerializedName
 import java.time.LocalTime
 
 data class BlockProgram(
-    val name: String,
-    val packages: String,
-    val startTime: String,
-    val endTime: String
+    @SerializedName("name") val name: String,
+    @SerializedName("pakcages") val packages: List<String>,
+    @SerializedName("startTime") val startTime: String,
+    @SerializedName("endTime") val endTime: String
 )
